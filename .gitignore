@@ -1,0 +1,22 @@
+# Compiled class files
+*.class
+
+# Maven target directory
+/target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# Mac and Linux
+.DS_Store
+
+# VSCode settings (if you use it)
+.vscode/
+
+# Environment files
+.env
+config.properties
