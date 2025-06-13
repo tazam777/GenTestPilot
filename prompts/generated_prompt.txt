@@ -1,0 +1,4 @@
+TYPE=NEGATIVE
+URL=https://the-internet.herokuapp.com/login
+USERNAME=test55
+PASSWORD=2211pass
