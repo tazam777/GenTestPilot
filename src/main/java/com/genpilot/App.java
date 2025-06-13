@@ -6,16 +6,25 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        String naturalPrompt;
 
-        System.out.println(" Describe the test case");
-        String naturalPrompt = scanner.nextLine();
+        // Check if input is coming from a terminal or piped file
+        if (System.console() == null) {
+            // No interactive input (e.g., CI/CD), use default or skip
+            System.out.println("⚠️ No input detected. Using fallback prompt.");
+            naturalPrompt = "Test login with username ass11 and password pass1122 it is a negative scenario";
+
+        } else {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Describe the test case:");
+            naturalPrompt = scanner.nextLine();
+        }
 
         // Step 1: Call PromptGenerator to generate structured prompt
         String promptFilePath = PromptGenerator.generateFromNaturalLanguage(naturalPrompt);
 
         if (promptFilePath == null) {
-            System.out.println(" Failed to create prompt.");
+            System.out.println("Failed to create prompt.");
             return;
         }
 
