@@ -32,8 +32,11 @@ public class LoginPage {
 
     public void enterLogin(String USERNAME) {
         WebElement usernameInput = wait.until(ExpectedConditions.visibilityOfElementLocated(idField));
+        sleep(5);
         usernameInput.clear();
+        sleep(5);
         usernameInput.sendKeys(USERNAME);
+        sleep(5);
     }
 
     public void enterPassword(String PASSWORD) {
@@ -53,7 +56,9 @@ public class LoginPage {
 
     // Optional: methods to verify outcomes
     public boolean isLoginSuccess() {
+        sleep(5);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(successMessage)).isDisplayed();
+        
     }
 
     public boolean isLoginError() {

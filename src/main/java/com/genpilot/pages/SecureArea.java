@@ -33,7 +33,9 @@ public class SecureArea {
 
     // Step: Get Success Message
     public String getSuccessMessage() {
+        sleep(5);
         WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated(successMessage));
+        sleep(5);
         return message.getText();
     }
 }

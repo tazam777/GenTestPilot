@@ -1,4 +1,4 @@
-TYPE=POSITIVE
+TYPE=NEGATIVE
 URL=https://the-internet.herokuapp.com/login
-USERNAME=tomsmith
+USERNAME=invalidusername
 PASSWORD=SuperSecretPassword!
